@@ -11,6 +11,8 @@ function buildEntry() {
         .reduce(reducer, {});
 }
 
+console.log(buildEntry());
+
 module.exports = {
     entry: buildEntry(),
     output: {
@@ -53,7 +55,8 @@ module.exports = {
           name: 'commons',
           filename: 'commons.js',
           minChunks: 2,
-      })
+      }),
+      new webpack.HotModuleReplacementPlugin()
     ],
     resolve: {
         alias: {
@@ -69,6 +72,9 @@ module.exports = {
     },
     devtool: '#eval-source-map' //[eval-source-map] [cheap-module-eval-source-map]
 }
+
+//process.env.NODE_ENV = 'production';
+console.log(process.env.NODE_ENV == 'production');
 
 if (process.env.NODE_ENV === 'production') {
     module.exports.devtool = '#source-map'
@@ -90,3 +96,5 @@ if (process.env.NODE_ENV === 'production') {
       })
     ])
 }
+
+console.log(module.exports.plugins);

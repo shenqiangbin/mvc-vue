@@ -1,5 +1,8 @@
 ﻿<template>
+  <div>
     <h1 class="current-time">The current date/time is {{ currentTime }}.</h1>
+    <h2>ahsdf</h2>
+  </div>
 </template>
 
 <script>
@@ -15,11 +18,9 @@
     }
 </script>
 
-<style lang="scss">
-    $pink: #f06595;
-
+<style>
     .current-time {
-        color: $pink;
+        color: blue;
     }
 
 </style>

@@ -6,6 +6,6 @@ const app = new Vue({
     el: "#vue-root",
     components: { CurrentTime },
     data: {        
-        header: "Vue is awesome!"
+        header: "Vue is awesome!123123"
     }
 });
